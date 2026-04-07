@@ -3,10 +3,10 @@ extends layout/app
 block page
     include chunk/header
 
-    h1 MAIN PAGE
+    h1.title MAIN PAGE
     p PUG! and it's working!
 
-    ul
+    ul.news
         each item in news
             li= item.name
 
