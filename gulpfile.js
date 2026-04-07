@@ -8,7 +8,7 @@ const path = require("./config/path.js");
 // Tasks
 const clear = require("./task/clear.js");
 const pug = require("./task/pug.js");
-const css = require("./task/css.js");
+const scss = require("./task/scss.js");
 
 // Server 
 const server = () => {
@@ -23,19 +23,19 @@ const server = () => {
 const watcher = () => {
     // watch("src/html/**/*.html", html); // наблюдение HTML
     watch(path.pug.watch, pug).on("all", browserSync.reload); // Наблюдение + browser sync (with PUG)
-    watch(path.css.watch, css).on("all", browserSync.reload);
+    watch(path.scss.watch, scss).on("all", browserSync.reload);
 }
 
 // Задачи (экспорт наружу)
 // exports.html = html; // == ОБЕ ЗАДАЧИ html vs PUG формируют файлы HTML и НЕ должны запускать в одной сборке (или/или)
 exports.pug = pug;
-exports.css = css;
+exports.scss = scss;
 exports.watch = watcher;
 exports.clear = clear;
 
 // Сборка
 exports.dev = series(
     clear,
-    parallel(pug, css),
+    parallel(pug, scss),
     parallel(watcher, server)
 );
