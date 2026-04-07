@@ -11,6 +11,14 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "gulp": "^5.0.1"
+    "browser-sync": "^3.0.4",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-size": "^5.0.0"
   }
 }
