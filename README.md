@@ -12,11 +12,13 @@ Created for fast and convenient static website development.
 - **Flexible folder structure** for convenient development
 
 ## Installation
-**Clone the repository:**
+**Clone the repository:
 ```bash
 git clone https://github.com/SergeiTWeb/gulp-project.git
 cd gulp-starter
+```
 
+```bash
 ## Install dependencies:
 npm install
 
@@ -24,6 +26,7 @@ npm install
 npm run dev
 # or
 gulp dev
+```
 
 ## Project Structure
 gulp-starter/
@@ -68,7 +71,7 @@ gulp-starter/
 ├── package-lock.json           # Locked dependency versions
 └── README.md                   # Project documentation
 
-🛠 Technologies & Plugins
+## 🛠 Technologies & Plugins
 Gulp — Build system
 Pug — Template engine
 BrowserSync — Browser synchronization
@@ -76,21 +79,22 @@ Gulp-Plumber — Error handling
 Gulp-Notify — Notifications
 Del — File deletion
 
-🚀 Getting Started
+## 🚀 Getting Started
 Open src/pug/index.pug and start editing
 Add styles to src/css/base.css
 Create new pages in src/pug/
 Changes will auto-reload in browser at http://localhost:3000
 
-📝 Notes
+## 📝 Notes
 The build supports both Pug and HTML (commented tasks)
 The public folder is auto-generated — do NOT edit it manually
 For production build, you can add minification and optimization
 
-👨‍💻 Author
+## 👨‍💻 Author
 Sergei Tumanov | Junior Frontend Developer
+https://web.sergeitumanov.com
 
-📄 License
+## 📄 License
 MIT License — feel free to use for your projects!
 
 Happy Coding! 💻✨
@@ -113,7 +117,9 @@ Happy Coding! 💻✨
 ```bash
 git clone https://github.com/SergeiTWeb/gulp-project.git
 cd gulp-starter
+```
 
+```bash
 ## Установка зависимости
 npm install
 
@@ -121,6 +127,7 @@ npm install
 npm run dev
 # или
 gulp dev
+```
 
 ## Структура проекта
 gulp-starter/
@@ -165,7 +172,7 @@ gulp-starter/
 ├── package-lock.json           # Зафиксированные версии зависимостей
 └── README.md                   # Документация проекта
 
-🛠 Технологии и плагины
+## 🛠 Технологии и плагины
 Gulp — система сборки
 Pug — шаблонизатор
 BrowserSync — синхронизация браузера
@@ -173,22 +180,22 @@ Gulp-Plumber — обработка ошибок
 Gulp-Notify — уведомления
 Del — удаление файлов
 
-🚀 Начало работы
+## 🚀 Начало работы
 Откройте src/pug/index.pug и начните редактировать
 Добавьте стили в src/css/base.css
 Создавайте новые страницы в src/pug/
 Изменения автоматически обновятся в браузере на http://localhost:3000
 
-📝 Примечания
+## 📝 Примечания
 Сборка поддерживает работу как с Pug, так и с HTML (закомментированные задачи)
 Папка public генерируется автоматически — не редактируйте её вручную
 Для production-сборки можно добавить минификацию и оптимизацию
 
-👨‍💻 Автор
-Сергей Туманов
-Начинающий frontend-разработчик
+## 👨‍💻 Автор
+Сергей Туманов | Начинающий frontend-разработчик
+https://web.sergeitumanov.com
 
-📄 Лицензия
+## 📄 Лицензия
 MIT License — свободно используйте для своих проектов!
 
 Happy Coding! 💻✨
