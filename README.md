@@ -18,17 +18,21 @@ git clone https://github.com/SergeiTWeb/gulp-project.git
 cd gulp-starter
 ```
 
-```bash
+
 ## Install dependencies:
+```bash
 npm install
+```
 
 ## Start development server:
+```bash
 npm run dev
 # or
 gulp dev
 ```
 
 ## Project Structure
+```bash
 gulp-starter/
 ├── config/                     # Configuration files
 │   ├── app.js                  # Application settings
@@ -70,25 +74,26 @@ gulp-starter/
 ├── package.json                # Dependencies & scripts
 ├── package-lock.json           # Locked dependency versions
 └── README.md                   # Project documentation
+```
 
 ## 🛠 Technologies & Plugins
-Gulp — Build system
-Pug — Template engine
-BrowserSync — Browser synchronization
-Gulp-Plumber — Error handling
-Gulp-Notify — Notifications
-Del — File deletion
+- Gulp — Build system
+- Pug — Template engine
+- BrowserSync — Browser synchronization
+- Gulp-Plumber — Error handling
+- Gulp-Notify — Notifications
+- Del — File deletion
 
 ## 🚀 Getting Started
-Open src/pug/index.pug and start editing
-Add styles to src/css/base.css
-Create new pages in src/pug/
-Changes will auto-reload in browser at http://localhost:3000
+1. Open src/pug/index.pug and start editing
+2. Add styles to src/css/base.css
+3. Create new pages in src/pug/
+4. Changes will auto-reload in browser at http://localhost:3000
 
 ## 📝 Notes
-The build supports both Pug and HTML (commented tasks)
-The public folder is auto-generated — do NOT edit it manually
-For production build, you can add minification and optimization
+- The build supports both Pug and HTML (commented tasks)
+- The public folder is auto-generated — do NOT edit it manually
+- For production build, you can add minification and optimization
 
 ## 👨‍💻 Author
 Sergei Tumanov | Junior Frontend Developer
@@ -119,17 +124,20 @@ git clone https://github.com/SergeiTWeb/gulp-project.git
 cd gulp-starter
 ```
 
-```bash
 ## Установка зависимости
+```bash
 npm install
+```
 
 ## Запустите сборку:
+```bash
 npm run dev
 # или
 gulp dev
 ```
 
 ## Структура проекта
+```bash
 gulp-starter/
 ├── config/                     # Конфигурационные файлы
 │   ├── app.js                  # Настройки приложения
@@ -171,25 +179,26 @@ gulp-starter/
 ├── package.json                # Зависимости и скрипты
 ├── package-lock.json           # Зафиксированные версии зависимостей
 └── README.md                   # Документация проекта
+```
 
 ## 🛠 Технологии и плагины
-Gulp — система сборки
-Pug — шаблонизатор
-BrowserSync — синхронизация браузера
-Gulp-Plumber — обработка ошибок
-Gulp-Notify — уведомления
-Del — удаление файлов
+- Gulp — система сборки
+- Pug — шаблонизатор
+- BrowserSync — синхронизация браузера
+- Gulp-Plumber — обработка ошибок
+- Gulp-Notify — уведомления
+- Del — удаление файлов
 
 ## 🚀 Начало работы
-Откройте src/pug/index.pug и начните редактировать
-Добавьте стили в src/css/base.css
-Создавайте новые страницы в src/pug/
-Изменения автоматически обновятся в браузере на http://localhost:3000
+1. Откройте src/pug/index.pug и начните редактировать
+2. Добавьте стили в src/css/base.css
+3. Создавайте новые страницы в src/pug/
+4. Изменения автоматически обновятся в браузере на http://localhost:3000
 
 ## 📝 Примечания
-Сборка поддерживает работу как с Pug, так и с HTML (закомментированные задачи)
-Папка public генерируется автоматически — не редактируйте её вручную
-Для production-сборки можно добавить минификацию и оптимизацию
+- Сборка поддерживает работу как с Pug, так и с HTML (закомментированные задачи)
+- Папка public генерируется автоматически — не редактируйте её вручную
+- Для production-сборки можно добавить минификацию и оптимизацию
 
 ## 👨‍💻 Автор
 Сергей Туманов | Начинающий frontend-разработчик
