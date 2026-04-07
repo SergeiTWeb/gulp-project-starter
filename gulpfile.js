@@ -9,6 +9,7 @@ const path = require("./config/path.js");
 const clear = require("./task/clear.js");
 const pug = require("./task/pug.js");
 const scss = require("./task/scss.js");
+const js = require("./task/js.js");
 
 // Server 
 const server = () => {
@@ -24,6 +25,7 @@ const watcher = () => {
     // watch("src/html/**/*.html", html); // наблюдение HTML
     watch(path.pug.watch, pug).on("all", browserSync.reload); // Наблюдение + browser sync (with PUG)
     watch(path.scss.watch, scss).on("all", browserSync.reload);
+    watch(path.js.watch, js).on("all", browserSync.reload);
 }
 
 // Задачи (экспорт наружу)
@@ -32,10 +34,11 @@ exports.pug = pug;
 exports.scss = scss;
 exports.watch = watcher;
 exports.clear = clear;
+exports.js = js;
 
 // Сборка
 exports.dev = series(
     clear,
-    parallel(pug, scss),
+    parallel(pug, scss, js),
     parallel(watcher, server)
 );

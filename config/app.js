@@ -8,5 +8,10 @@ module.exports = {
         data: {
             news: require('../data/news.json')
         }
+    },
+
+    webpack: {
+        mode: "development" // режим разработки 
+        //mode: "production" // режим продакшн дает минифийированный вариант JS
     }
 }
