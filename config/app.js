@@ -13,5 +13,12 @@ module.exports = {
     webpack: {
         mode: "development" // режим разработки 
         //mode: "production" // режим продакшн дает минифийированный вариант JS
+    },
+
+    imagemin: {
+        verbose: true,
+        progressive: true,
+        interlaced: true,
+        optimizationLevel: 3
     }
 }

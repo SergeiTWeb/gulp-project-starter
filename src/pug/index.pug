@@ -6,8 +6,12 @@ block page
     h1.title MAIN PAGE
     p PUG! and it's working!
 
+    img(src="img/back.jpg", alt="Web Developer at work", width="300")
+
     ul.news
         each item in news
             li= item.name
+
+    //img(src="img/js.png", alt="Coding in JavaScript", width="500")        
 
     include chunk/footer

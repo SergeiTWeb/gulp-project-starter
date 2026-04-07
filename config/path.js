@@ -1,4 +1,4 @@
-const { pug } = require("../gulpfile");
+//const { pug } = require("../gulpfile");
 
 const pathSrc = "./src";
 const pathDest = "./public";
@@ -34,5 +34,11 @@ module.exports = {
         src: pathSrc + "/js/*.js",
         watch: pathSrc + "/js/**/*.js",
         dest: pathDest + "/js"
+    },
+
+    img: {
+        src: pathSrc + "/img/*.{png,jpg,jpeg,gif,svg}",    // ← * = только файлы в корне img/
+        watch: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}", // ← ** = файлы в подпапках тоже
+        dest: pathDest + "/img"
     }
 }    
