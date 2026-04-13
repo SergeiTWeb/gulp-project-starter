@@ -20,5 +20,9 @@ module.exports = {
         progressive: true,
         interlaced: true,
         optimizationLevel: 3
+    },
+
+    fonter: {
+        formats: ["ttf", "woff", "eot", "svg"]
     }
 }

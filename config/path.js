@@ -40,5 +40,11 @@ module.exports = {
         src: pathSrc + "/img/*.{png,jpg,jpeg,gif,svg}",    // ← * = только файлы в корне img/
         watch: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}", // ← ** = файлы в подпапках тоже
         dest: pathDest + "/img"
+    },
+
+    font: {
+        src: pathSrc + "/font/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
+        watch: pathSrc + "/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
+        dest: pathDest + "/font"
     }
 }    
