@@ -6,12 +6,21 @@ block page
     h1.title MAIN PAGE
     p PUG! and it's working!
 
-    img(src="img/back.jpg", alt="Web Developer at work", width="300")
+    picture
+        //Если нет автоматизации -webp-html то таким образом можно прописать вручную
+        source(srcset="img/back.webp", type="image/webp")
+        img(src="img/back.jpg", alt="Web Developer at work", width="300")
 
     ul.news
         each item in news
             li= item.name
 
     //img(src="img/js.png", alt="Coding in JavaScript", width="500")        
+    
+    h2.title SECOND TITLE PAGE
+    p Images
+
+    picture
+        img(src="img/js.jpg", alt="Coding in JS", width="300")
 
     include chunk/footer

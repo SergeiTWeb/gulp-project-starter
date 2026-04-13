@@ -10,6 +10,7 @@ const notify = require("gulp-notify");
 const fileInclude = require("gulp-file-include");
 const htmlmin = require("gulp-htmlmin");
 const size = require("gulp-size").default;
+const webpHtml = require("gulp-webp-html");
 
 // HTML - обработка
 const html = () => {
@@ -23,6 +24,7 @@ const html = () => {
     })) // Этот плагин перехватывает все ошибки цепочки
     .pipe(fileInclude()) // Вызываем подключнный плагин перед записью в директорию public
     .pipe(size({title: "before"}))
+    .pipe(webpHtml())
     .pipe(htmlmin(app.htmlmin))
     .pipe(size({title: "after"}))
     .pipe(dest(path.html.dest))
