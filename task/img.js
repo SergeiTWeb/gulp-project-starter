@@ -10,6 +10,7 @@ const notify = require("gulp-notify");
 const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const webp = require("gulp-webp").default;
+const gulpIf = require("gulp-if");
 
 // Images - обработка
 const img = () => {
@@ -25,7 +26,7 @@ const img = () => {
         .pipe(dest(path.img.dest))   // Сохраняем WebP
         .pipe(src(path.img.src, { encoding: false, allowEmpty: true })) // ← Читаем ОРИГИНАЛЫ снова для сжатия
         .pipe(newer(path.img.dest))
-        .pipe(imagemin(app.imagemin)) // Сжимаем оригиналы (jpg, png и т.д.)
+        .pipe(gulpIf(app.isProd, imagemin(app.imagemin))) // Сжимаем оригиналы (jpg, png и т.д.) в режиме production
         .pipe(dest(path.img.dest));   // Сохраняем сжатые оригиналы
 }
 
