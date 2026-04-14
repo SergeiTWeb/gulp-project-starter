@@ -1,12 +1,4 @@
-.news {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media (max-width: 700px) {
-    .news {
-        display: block;
-    }
-}
+/* ============================================================================
+   NEWS STYLESHEET - GULP Starter Kit (HTML/CSS Workflow)
+   Compact, mobile-first, responsive
+   ============================================================================ */

@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GULP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern Gulp starter kit for static websites">
+  <title>GULP Starter Kit</title>
+  
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="css/main.min.css" as="style">
+  <link rel="stylesheet" href="css/main.min.css">
+  
+  <!-- Defer non-critical JS -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-    @@include("chunk/header.html")
 
-    <h1>Hello Gulp!!!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa temporibus optio eligendi quod nam error expedita ab. Aliquam beatae sed sit maiores optio atque nobis ipsa repudiandae eligendi, aspernatur doloremque, dolor voluptatem. Modi repudiandae eos quos amet nam tenetur corporis veniam minus, possimus at voluptatum ad. Sequi eaque deserunt amet.</p>
+  @@include('chunk/header.html')
 
-    @@loop("chunk/news-item.html", "../../data/news.json")
+  <main class="main-content">
+    
+    <!-- Hero section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1 class="hero-title">Modern Gulp Starter</h1>
+        <p class="hero-subtitle">Fast, modular, production-ready</p>
+      </div>
+    </section>
 
-    @@include("chunk/footer.html")
+    <!-- Features section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Why This Starter?</h2>
+        <ul class="features-grid">
+          <li class="feature-card">
+            <h3>🔄 Live Reload</h3>
+            <p>Auto-update on file changes</p>
+          </li>
+          <li class="feature-card">
+            <h3>🎨 Dual Workflow</h3>
+            <p>Pug/SCSS or HTML/CSS — your choice</p>
+          </li>
+          <li class="feature-card">
+            <h3>🖼️ WebP Ready</h3>
+            <p>Auto image optimization</p>
+          </li>
+          <li class="feature-card">
+            <h3>🔤 Font Pipeline</h3>
+            <p>TTF → WOFF/WOFF2 + @font-face</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Image demo section -->
+    <section id="demo" class="image-demo">
+      <div class="container">
+        <h2 class="section-title">Image Optimization</h2>
+        <div class="image-grid">
+          <figure class="image-card">
+            <picture>
+              <source srcset="img/back.webp" type="image/webp">
+              <img src="img/back.jpg" alt="Background preview" loading="lazy" width="400" height="300">
+            </picture>
+            <figcaption>JPG → WebP</figcaption>
+          </figure>
+          <figure class="image-card">
+            <picture>
+              <source srcset="img/js.webp" type="image/webp">
+              <img src="img/js.jpg" alt="Code preview" loading="lazy" width="400" height="300">
+            </picture>
+            <figcaption>Lossless compression</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- News section (static demo - no JSON injection in plain HTML) -->
+    <section id="news" class="news-section">
+      <div class="container">
+        <h2 class="section-title">Latest News</h2>
+        <ul class="news">
+          <li class="news-item">
+            <h3>Starter Updated</h3>
+            <p>New dual workflow support added</p>
+          </li>
+          <li class="news-item">
+            <h3>Performance Boost</h3>
+            <p>Faster builds with gulp-newer</p>
+          </li>
+          <li class="news-item">
+            <h3>Mobile First</h3>
+            <p>Responsive by default</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact/CTA section -->
+    <section id="contact" class="cta">
+      <div class="container text-center">
+        <h2>Ready to start?</h2>
+        <p>Clone, customize, deploy — in minutes.</p>
+        <a class="btn btn-primary" href="https://github.com/SergeiTWeb/gulp-project" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('chunk/footer.html')
+
 </body>
 </html>
