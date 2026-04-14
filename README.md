@@ -19,7 +19,7 @@ Created for fast static website development with live-reload and production opti
 **Clone the repository:**
 ```bash
 git clone https://github.com/SergeiTWeb/gulp-project.git
-cd gulp-starter
+cd gulp-project
 ```
 
 **Install dependencies:**
