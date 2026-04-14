@@ -127,4 +127,4 @@ MIT License — free for personal and commercial use.
 
 **If you like this build you can [buy me a coffee](https://www.paypal.com/paypalme/nctmmrn)**
 
-**Happy Coding! 💻✨**
+**Happy Coding!**
