@@ -99,12 +99,17 @@ html { scroll-behavior: smooth; }
     transition: color 0.2s;
     
     &:hover { color: #4f46e5; }
+
+    @include ph {
+      &:hover { color: #000; }
+    }
   }
   
   @include ph {
     padding: 0.75rem 0;
     .header-inner { flex-direction: column; gap: 0.5rem; }
     .nav-list { gap: 0.75rem; font-size: 0.95rem; }
+    background:rgb(79, 70, 229);
   }
 }
 
@@ -179,6 +184,7 @@ section {
   @include ph {
     flex: 1 1 100%;
     max-width: none;
+    background:rgb(79, 70, 229);
   }
 }
 
@@ -226,6 +232,7 @@ section {
   @include ph {
     flex: 1 1 100%;
     max-width: none;
+    background:rgb(79, 70, 229);
   }
 }
 

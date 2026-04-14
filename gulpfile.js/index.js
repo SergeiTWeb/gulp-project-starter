@@ -40,12 +40,12 @@ const server = () => {
 
 const watcher = () => {
     // Pug/SCSS workflow (primary)
-    //$.gulp.watch($.path.pug.watch, task.pug).on('change', $.browserSync.reload);
-    //$.gulp.watch($.path.scss.watch, task.scss).on('change', $.browserSync.reload);
+    $.gulp.watch($.path.pug.watch, task.pug).on('change', $.browserSync.reload);
+    $.gulp.watch($.path.scss.watch, task.scss).on('change', $.browserSync.reload);
     
     // Plain HTML/CSS workflow (alternative)
-    $.gulp.watch($.path.html.watch, task.html).on('change', $.browserSync.reload);
-    $.gulp.watch($.path.css.watch, task.css).on('change', $.browserSync.reload);
+    //$.gulp.watch($.path.html.watch, task.html).on('change', $.browserSync.reload);
+    //$.gulp.watch($.path.css.watch, task.css).on('change', $.browserSync.reload);
     
     // Assets (shared by both workflows)
     $.gulp.watch($.path.js.watch, task.js).on('change', $.browserSync.reload);
@@ -63,10 +63,10 @@ const watcher = () => {
 const build = $.gulp.series(
     task.clear,
     $.gulp.parallel(
-        //task.pug,      // Compile Pug → HTML
-        task.html,     // Process plain HTML files / alternative
-        //task.scss,     // Compile SCSS → CSS
-        task.css,      // Process plain CSS files / alternative
+        task.pug,      // Compile Pug → HTML
+        //task.html,     // Process plain HTML files / alternative
+        task.scss,     // Compile SCSS → CSS
+        //task.css,      // Process plain CSS files / alternative
         task.js,       // Bundle & transpile JavaScript
         task.img,      // Optimize images + WebP conversion
         task.font      // Convert fonts + generate @font-face
