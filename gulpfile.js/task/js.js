@@ -1,29 +1,31 @@
 const { src, dest } = require("gulp");
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
-//Plugins
+// Plugins
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const babel = require("gulp-babel");
-//const uglify = require("gulp-uglify"); // Сжимает код JS
+const gulpIf = require("gulp-if");
+const uglify = require("gulp-uglify");  // Minifies JS code (optional, production only)
 const webpack = require("webpack-stream");
 
-// JavaScript - обработка
+// JavaScript - processing pipeline
 const js = () => {
-    return src (path.js.src, { sourcemaps: true })
-    .pipe(plumber({
-        errorHandler: notify.onError(error => ({
-            title: "JavaScript",
-            message: error.message
+    return src(path.js.src, { sourcemaps: app.isDev })  // Conditional sourcemaps for dev mode
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: "JavaScript",
+                message: "Error: <%= error.message %>"
+            }))
         }))
-    }))
-    .pipe(babel())
-    .pipe(webpack(app.webpack))
-    //.pipe(uglify()) // Сжимает код JS
-    .pipe(dest(path.js.dest, { sourcemaps: true }));
+        .pipe(babel())  // Transpile ES6+ to browser-compatible JS (config in .babelrc)
+        .pipe(webpack(app.webpack))  // Bundle modules with webpack (config in app.js)
+        .pipe(gulpIf(app.isProd, uglify()))  // Minify JS code only in production mode
+        .pipe(dest(path.js.dest, { sourcemaps: app.isDev }));  // Save to public/js
 }
 
-module.exports = js; //Экспорт модуля наружу
+// Export module
+module.exports = js;

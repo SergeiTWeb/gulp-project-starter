@@ -1,6 +1,6 @@
 const { src, dest } = require("gulp");
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
@@ -17,7 +17,7 @@ const shorthand = require("gulp-shorthand");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
 const webpCss = require("gulp-webp-css");
 
-// CSS - обработка
+// CSS - processing pipeline
 const css = () => {
     return src (path.css.src, { sourcemaps: app.isDev })
     .pipe(plumber({
@@ -26,8 +26,8 @@ const css = () => {
             message: error.message
         }))
     }))
-    .pipe(concat("main.css"))
     .pipe(cssimport())
+    .pipe(concat("main.css"))
     .pipe(webpCss())
     .pipe(autoprefixer())
     .pipe(shorthand())
@@ -40,4 +40,5 @@ const css = () => {
     .pipe(dest(path.css.dest, { sourcemaps: app.isDev }));
 }
 
-module.exports = css; //Экспорт модуля наружу
+// Export module
+module.exports = css;
