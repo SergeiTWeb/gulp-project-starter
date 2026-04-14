@@ -18,8 +18,8 @@ Created for fast static website development with live-reload and production opti
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/SergeiTWeb/gulp-project.git
-cd gulp-starter
+git clone https://github.com/SergeiTWeb/gulp-project-starter/tree/finalHtml
+cd gulp-project-starter
 ```
 
 **Install dependencies:**
@@ -67,7 +67,7 @@ gulp fonts # Convert fonts
 # Project Structure:
 
 ```bash
-gulp-starter/
+gulp-project-starter/
 ├── gulpfile.js/                # Main Gulp configuration folder
 │   ├── config/                 # Configuration files
 │   │   ├── app.js              # Plugin settings (modes, options)
