@@ -1,0 +1,65 @@
+extends layout/app
+
+block page
+  include chunk/header
+
+  main.main-content
+    //- Hero section
+    section#hero.hero
+      .container
+        h1.hero-title Modern Gulp Starter
+        p.hero-subtitle Fast, modular, production-ready
+
+    //- Features section
+    section#features.features
+      .container
+        h2.section-title Why This Starter?
+        ul.features-grid
+          li.feature-card
+            h3 🔄 Live Reload
+            p Auto-update on file changes
+          li.feature-card
+            h3 🎨 Dual Workflow
+            p Pug/SCSS or HTML/CSS — your choice
+          li.feature-card
+            h3 🖼️ WebP Ready
+            p Auto image optimization
+          li.feature-card
+            h3 🔤 Font Pipeline
+            p TTF → WOFF/WOFF2 + @font-face
+
+    //- Image demo section
+    section#demo.image-demo
+      .container
+        h2.section-title Image Optimization
+        .image-grid
+          figure.image-card
+            picture
+              source(srcset="img/back.webp", type="image/webp")
+              img(src="img/back.jpg", alt="Background preview", loading="lazy")
+            figcaption | JPG → WebP
+          
+          figure.image-card
+            picture
+              source(srcset="img/js.webp", type="image/webp")
+              img(src="img/js.jpg", alt="Code preview", loading="lazy")
+            figcaption | Lossless compression
+
+    //- News section (dynamic from JSON)
+    section#news.news-section
+      .container
+        h2.section-title Latest News
+        ul.news
+          each item in news
+            li.news-item
+              h3= item.name
+              p= item.description || "Demo content"
+
+    //- Contact/CTA section
+    section#contact.cta
+      .container.text-center
+        h2 Ready to start?
+        p Clone, customize, deploy — in minutes.
+        a.btn.btn-primary(href="https://github.com/SergeiTWeb/gulp-project") View on GitHub
+
+  include chunk/footer
