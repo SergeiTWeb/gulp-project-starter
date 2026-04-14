@@ -2,6 +2,7 @@
 // GLOBAL NAMESPACE - Centralized access to Gulp, plugins, and configuration
 // Using global.$ to avoid repetitive require() in every task file
 // ============================================================================
+
 global.$ = {
     gulp: require('gulp'),
     gp: require("gulp-load-plugins")(),           // Auto-load gulp plugins by name
@@ -13,12 +14,14 @@ global.$ = {
 // ============================================================================
 // TASKS - Load all task files from ./task/ directory (modular architecture)
 // ============================================================================
+
 const requireDir = require("require-dir");
 const task = requireDir("./task", { recurse: true });
 
 // ============================================================================
 // SERVER - Initialize BrowserSync development server
 // ============================================================================
+
 const server = () => {
     $.browserSync.init({
         server: {
@@ -34,6 +37,7 @@ const server = () => {
 // WATCHER - Watch source files and trigger tasks + browser reload on change
 // Supports both Pug/SCSS and plain HTML/CSS workflows
 // ============================================================================
+
 const watcher = () => {
     // Pug/SCSS workflow (primary)
     $.gulp.watch($.path.pug.watch, task.pug).on('change', $.browserSync.reload);
@@ -55,6 +59,7 @@ const watcher = () => {
 
 // Production build: clear + parallel processing of ALL assets
 // Supports both Pug/SCSS and HTML/CSS workflows
+
 const build = $.gulp.series(
     task.clear,
     $.gulp.parallel(
@@ -77,6 +82,7 @@ const dev = $.gulp.series(
 // ============================================================================
 // EXPORTS - Make tasks available via CLI (e.g., gulp pug, gulp html)
 // ============================================================================
+
 exports.pug = task.pug;
 exports.html = task.html;
 exports.scss = task.scss;
@@ -91,4 +97,5 @@ exports.server = server;
 // ============================================================================
 // DEFAULT TASK - Run dev mode by default, build if --production flag is set
 // ============================================================================
+
 exports.default = $.app.isProd ? build : dev;

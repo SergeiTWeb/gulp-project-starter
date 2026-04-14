@@ -1,14 +1,14 @@
 [
     {
-        "name": "The first news",
-        "body": "Text of the first news"
+        "name": "The first block",
+        "body": "Text of the first block"
     },
         {
-        "name": "The second news",
-        "body": "Text of the second news"
+        "name": "The second block",
+        "body": "Text of the second block"
     },
         {
-        "name": "The third news",
-        "body": "Text of the third news"
+        "name": "The third block",
+        "body": "Text of the third block"
     }
 ]

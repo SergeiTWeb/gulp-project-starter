@@ -1,7 +1,9 @@
+// Title component - minimal
 .title {
-    text-transform: uppercase;
-
-    @include ph {
-        text-align: center;
-    }
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  @include ph {
+    text-align: center;
+  }
 }

@@ -1,7 +1,8 @@
 {
   "name": "gulp-starter",
   "version": "1.0.0",
-  "description": "",
+  "author": "Sergei Tumanov",
+  "description": "2026 build",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -16,7 +17,6 @@
     ]
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

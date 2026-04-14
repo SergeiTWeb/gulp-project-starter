@@ -118,11 +118,12 @@ gulp-starter/
 ✅ public/ is auto-generated — never edit manually
 ✅ Add --production flag for minification
 
-# 📄 License:
+# License:
 MIT License — free for personal and commercial use.
 
-# 👨‍💻 Author:
+# Author:
 **Sergei Tumanov**
-https://opentips.com.au
+**[my portfolio and projects](https://opentips.com.au)**
+**[Buy me a coffee](https://www.paypal.com/paypalme/nctmmrn)**
 
 **Happy Coding! 💻✨**
