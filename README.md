@@ -122,8 +122,8 @@ gulp-starter/
 MIT License — free for personal and commercial use.
 
 # Author:
-**Sergei Tumanov**
-**[my portfolio and projects](https://opentips.com.au)**
-**[Buy me a coffee](https://www.paypal.com/paypalme/nctmmrn)**
+**Sergei Tumanov | [portfolio](https://opentips.com.au)**
+
+**Say thank you and [buy me a coffee](https://www.paypal.com/paypalme/nctmmrn)**
 
 **Happy Coding! 💻✨**
