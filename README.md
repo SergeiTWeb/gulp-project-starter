@@ -1,5 +1,5 @@
 ## GULP Starter Kit (2026)
-**Plain HTML/CSS workflow is active | to change, go to gulpfile.js -> index.js**
+*Plain HTML/CSS workflow is active | to change, go to gulpfile.js -> index.js*
 
 Modern Gulp build with **dual workflow support**: Pug+SCSS or HTML+CSS.  
 Created for fast static website development with live-reload and production optimization.
