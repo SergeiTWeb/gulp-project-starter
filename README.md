@@ -123,8 +123,7 @@ gulp-project-starter/
 MIT License — free for personal and commercial use.
 
 # Author:
-**Sergei Tumanov | [portfolio](https://opentips.com.au)**
-
+**Sergei Tumanov | [portfolio](https://web.sergeitumanov.com)**
 **If you like this build you can [buy me a coffee](https://www.paypal.com/paypalme/nctmmrn)**
 
 **Happy Coding!**
